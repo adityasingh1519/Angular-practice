@@ -1,19 +1,21 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule , CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
 export class LoginComponent {
-  onSubmit() {
-    throw new Error('Method not implemented.');
-  }
-
   name: string = '';
   email: string = '';
   message: string = '';
+  ifsubmit : boolean = false;
+
+  onSubmit(): void {
+    this.ifsubmit = true;
+  }
 }

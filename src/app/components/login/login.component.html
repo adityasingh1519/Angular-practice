@@ -32,7 +32,12 @@
       Register Now
     </h2>
   </div>
-  <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-10" (ngSubmit)="onSubmit()">
+  <form
+    action="#"
+    method="POST"
+    class="mx-auto mt-16 max-w-xl sm:mt-10"
+    (ngSubmit)="onSubmit()"
+  >
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
       <div class="sm:col-span-2">
         <label
@@ -100,6 +105,8 @@
   </form>
 </div>
 
-<p>{{name}}</p>
-<p>{{email}}</p>
-<p>{{message}}</p>
+<div *ngIf="ifsubmit" >
+  <p>{{ name }}</p>
+  <p>{{ email }}</p>
+  <p>{{ message }}</p>
+</div>
